@@ -1,0 +1,148 @@
+/* Paleta de Cores Profissional Rosa & Preto:
+   Fundo Principal: #FFFFFF
+   Preto Principal: #1A1A1A
+   Rosa de Destaque: #FF69B4
+   Cinza Claro: #808080
+   Branco: #FFFFFF
+*/
+
+/* --- Estilos Gerais --- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFFFF; /* Fundo Branco */
+    color: #1A1A1A; /* Texto Principal Preto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: #1A1A1A;
+}
+
+.subtext {
+    color: #808080; /* Cinza para Subtítulos e Contexto */
+}
+
+a {
+    color: #1A1A1A;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FF69B4; /* Rosa no Hover */
+}
+
+
+/* --- Header e Navegação --- */
+
+header {
+    background-color: #1A1A1A; /* Preto Principal */
+    color: #FFFFFF;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.logo strong {
+    color: #FF69B4; /* Destaque Rosa no Logo */
+}
+
+nav a {
+    color: #FFFFFF;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #FF69B4;
+}
+
+
+/* --- Seção Hero (Destaque Inicial) --- */
+
+.hero {
+    background-color: #F8F8F8; /* Um cinza muito leve para dar profundidade */
+    text-align: center;
+    padding: 80px 50px;
+    border-bottom: 3px solid #FF69B4; /* Linha de Destaque Rosa */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+/* --- Layout de Conteúdo e Aside --- */
+
+.content-wrapper {
+    display: flex;
+    padding: 40px 50px;
+    gap: 40px;
+}
+
+main {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+    background-color: #F8F8F8;
+    padding: 20px;
+    border-left: 1px solid #E0E0E0; /* Borda Cinza sutil */
+    border-radius: 5px;
+}
+
+
+/* --- Botões de Ação (CTA) --- */
+
+.cta-button, .newsletter-button {
+    padding: 12px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.cta-button {
+    background-color: #FF69B4; /* Rosa de Destaque */
+    color: #FFFFFF;
+}
+
+.cta-button:hover {
+    background-color: #1A1A1A; /* Hover para Preto */
+}
+
+.newsletter-button {
+    background-color: #1A1A1A; /* Preto Principal */
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.newsletter-button:hover {
+    background-color: #FF69B4; /* Hover para Rosa */
+}
+
+
+/* --- Footer --- */
+
+footer {
+    background-color: #1A1A1A; /* Preto Principal */
+    color: #808080; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
