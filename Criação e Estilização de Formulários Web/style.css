@@ -1,0 +1,210 @@
+/* Importação de Fonte Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Estilização Geral e Base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Gradiente de fundo moderno */
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* Cor de texto padrão mais escura */
+    overflow: hidden; /* Para evitar scroll indesejado com animações */
+}
+
+/* Container do Formulário */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px; /* Bordas mais arredondadas */
+    /* Sombra mais suave e profunda */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%; /* Default para telas pequenas */
+    max-width: 450px; /* Limite de largura para desktop */
+    text-align: center; /* Centraliza o texto dentro do container */
+    box-sizing: border-box; /* Garante padding e borda inclusos na largura */
+    animation: fadeIn 0.8s ease-out forwards; /* Animação de entrada */
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Campos de Input e Ícones */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0a0; /* Cor mais suave para os ícones */
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 14px 14px 50px; /* Mais padding para o ícone */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #b0b0b0; /* Cor do placeholder */
+}
+
+input:focus {
+    border-color: #8c73e6; /* Cor da borda ao focar */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(140, 115, 230, 0.2); /* Sombra de foco mais sutil */
+}
+
+/* Mudar cor do ícone ao focar no input */
+.input-group input:focus + .icon {
+    color: #8c73e6;
+}
+
+/* Link "Esqueceu sua senha?" */
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    color: #8c73e6; /* Cor primária */
+    text-decoration: none;
+    margin-top: -15px; /* Ajuste para alinhar */
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #6a4ecf;
+}
+
+/* Grupo de Botões */
+.button-group {
+    display: flex;
+    flex-direction: column; /* Botões um abaixo do outro em telas pequenas */
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Transição para todas as propriedades */
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, #8c73e6 0%, #a28de8 100%); /* Gradiente vibrante */
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px); /* Pequeno efeito de levantamento */
+    box-shadow: 0 8px 15px rgba(140, 115, 230, 0.3);
+}
+
+.btn-clear {
+    background-color: #cccccc; /* Cinza suave */
+    color: #666;
+}
+
+.btn-clear:hover {
+    background-color: #b0b0b0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Pseudo-elemento ::after para Efeito Visual (Hover) nos Botões - Mais Sutil */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Inicia fora da tela */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15); /* Brilho sutil */
+    transition: left 0.4s ease-out; /* Animação de deslize */
+    transform: skewX(-20deg); /* Efeito de brilho inclinado */
+}
+
+.btn:hover::after {
+    left: 100%; /* Desliza para a direita */
+}
+
+/* Texto de Cadastro */
+.signup-text {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.signup-text a {
+    color: #8c73e6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-text a:hover {
+    color: #6a4ecf;
+    text-decoration: underline;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Telas maiores que 600px (Tablets e Desktops) */
+@media screen and (min-width: 600px) {
+    .container {
+        width: 400px; /* Largura fixa para telas maiores */
+        margin: auto; /* Centraliza horizontalmente */
+    }
+
+    .button-group {
+        flex-direction: row; /* Botões lado a lado no desktop */
+    }
+}
