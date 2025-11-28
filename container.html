@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox: Alinhamento Centralizado (Estilo Feminino)</title>
+    <style> 
+        /* Paleta de Cores Feminina: Verde, Rosa e Azul
+           Fundo Principal: #F0F8FF (Azul Bebê Suave)
+           Cor Primária (Contêiner): #A2D9CE (Verde Menta)
+           Cor de Destaque 1 (Rosa): #FF69B4 (Rosa Vibrante)
+           Cor de Destaque 2 (Azul): #4FC3F7 (Azul Céu)
+           Cor do Texto: #004D40 (Verde Escuro - Contraste)
+        */
+
+        /* Estilos básicos para o body e garantir a altura total da viewport */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #F0F8FF; /* Fundo: Azul Bebê Suave */
+        }
+
+        /* 1. O CONTÊINER FLEXÍVEL (Container Pai) */
+        .flex-container {
+            /* Define a altura mínima para que o alinhamento vertical seja visível */
+            min-height: 100vh;
+            
+            /* Habilita o Flexbox */
+            display: flex;
+            
+            /* Centraliza os itens horizontalmente (Eixo Principal) */
+            justify-content: center;
+            
+            /* Centraliza os itens verticalmente (Eixo Cruzado) */
+            align-items: center;
+
+            /* Estilo visual do contêiner */
+            background-color: #A2D9CE; /* Contêiner: Verde Menta Suave */
+            border: 5px solid #FF69B4; /* Borda: Rosa Vibrante */
+            gap: 20px; /* Espaço entre as caixas */
+        }
+
+        /* 4. As Caixas (Itens Filhos) */
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #FF69B4; /* Caixa Padrão: Rosa Vibrante */
+            color: #004D40; /* Texto: Verde Escuro para Contraste */
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s; /* Adiciona animação no hover */
+        }
+
+        /* Estilo específico para a segunda caixa (Azul) */
+        .box:nth-child(2) {
+            height: 200px; 
+            background-color: #4FC3F7; /* Caixa 2: Azul Céu */
+            color: white; /* Texto Branco no Fundo Azul para melhor contraste */
+        }
+        
+        /* Efeito de hover (passar o mouse) */
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- O contêiner Flexbox com a classe 'flex-container' -->
+    <div class="flex-container">
+        <div class="box">Rosa (Caixa 1)</div>
+        <div class="box">Azul (Caixa 2)</div>
+        <div class="box">Rosa (Caixa 3)</div>
+    </div>
+
+</body>
+</html>
